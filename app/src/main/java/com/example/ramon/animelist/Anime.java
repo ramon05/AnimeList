@@ -79,7 +79,7 @@ public class Anime {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
-    
+
 
 
 }
