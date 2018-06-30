@@ -34,18 +34,25 @@
             android:layout_height="wrap_content"
             android:text="Categoria"
             android:id="@+id/categoria"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/calificacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@android:color/holo_green_light"
             android:text="0.0"
             android:textColor="@android:color/background_light"
             android:textSize="18dp"
             android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estudio"
+            android:layout_marginTop="5dp"
+            android:id="@+id/estudio"/>
         
     </LinearLayout>
 
