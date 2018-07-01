@@ -1,6 +1,7 @@
 package com.example.ramon.animelist;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -37,7 +39,26 @@ public class AnimeViewAdapter extends RecyclerView.Adapter<AnimeViewAdapter.anim
         LayoutInflater infla = LayoutInflater.from(mContext);
         view = infla.inflate(R.layout.anime_list_item,parent,false);
 
-        return new animeViewHolder(view);
+        final animeViewHolder anime = new animeViewHolder(view);
+        anime.contenedorAnime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, DescripcionAnimeActivity.class);
+
+                intent.putExtra("name",Datos.get(anime.getAdapterPosition()).getNombre());
+                intent.putExtra("descripcion",Datos.get(anime.getAdapterPosition()).getDescripcion());
+                intent.putExtra("categoria",Datos.get(anime.getAdapterPosition()).getCategorias());
+                intent.putExtra("calificacion",Datos.get(anime.getAdapterPosition()).getClasificacion());
+                intent.putExtra("estudio",Datos.get(anime.getAdapterPosition()).getEstudio());
+                intent.putExtra("episodio",Datos.get(anime.getAdapterPosition()).getNum_episodios());
+                intent.putExtra("imagen",Datos.get(anime.getAdapterPosition()).getImagen());
+
+                mContext.startActivity(intent);
+            }
+        });
+
+
+        return  anime;
     }
 
     @Override
@@ -64,6 +85,7 @@ public class AnimeViewAdapter extends RecyclerView.Adapter<AnimeViewAdapter.anim
         TextView tv_categoria;
         TextView tv_estudio;
         AppCompatImageView img_portada;
+        LinearLayout contenedorAnime;
 
         public animeViewHolder(View itemView) {
             super(itemView);
@@ -72,6 +94,7 @@ public class AnimeViewAdapter extends RecyclerView.Adapter<AnimeViewAdapter.anim
             tv_categoria = itemView.findViewById(R.id.categoria);
             tv_estudio = itemView.findViewById(R.id.estudio);
             img_portada = itemView.findViewById(R.id.portada);
+            contenedorAnime = itemView.findViewById(R.id.contenedor_anime_list);
 
         }
     }
