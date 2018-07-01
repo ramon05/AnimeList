@@ -44,8 +44,10 @@ public class DescripcionAnimeActivity extends AppCompatActivity {
         tv_calificacion.setText(cal);
         tv_estudio.setText(est);
 
+        collapsingToolbarLayout.setTitle(nomb);
+
         RequestOptions requestOptions = new RequestOptions().centerCrop().placeholder(R.drawable.loading_shape).error(R.drawable.loading_shape);
 
-        Glide.with(this).load(img).into(tv_imagen);
+        Glide.with(this).load(img).apply(requestOptions).into(tv_imagen);
     }
 }

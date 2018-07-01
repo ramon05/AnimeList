@@ -42,8 +42,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
-                    android:orientation="vertical"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -58,8 +58,8 @@
                         android:id="@+id/b_categoria"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Categoria"
-                        android:layout_marginTop="5dp"/>
+                        android:layout_marginTop="5dp"
+                        android:text="Categoria" />
 
                     <TextView
                         android:id="@+id/b_calificacion"
@@ -70,18 +70,17 @@
                         android:text="0.0"
                         android:textColor="@android:color/background_light"
                         android:textSize="18dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/b_estudio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Estudio"
-                        android:layout_marginTop="5dp"/>
+                        android:layout_marginTop="5dp"
+                        android:text="Estudio" />
 
 
                 </LinearLayout>
-
 
 
             </LinearLayout>
@@ -89,13 +88,13 @@
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
-    
+
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:padding="16dp">
-        
+
         <TextView
             android:text="Descripcion Anime"
             android:layout_width="match_parent"

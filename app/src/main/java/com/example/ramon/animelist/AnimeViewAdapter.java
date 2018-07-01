@@ -45,7 +45,7 @@ public class AnimeViewAdapter extends RecyclerView.Adapter<AnimeViewAdapter.anim
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, DescripcionAnimeActivity.class);
 
-                intent.putExtra("name",Datos.get(anime.getAdapterPosition()).getNombre());
+                intent.putExtra("nombre",Datos.get(anime.getAdapterPosition()).getNombre());
                 intent.putExtra("descripcion",Datos.get(anime.getAdapterPosition()).getDescripcion());
                 intent.putExtra("categoria",Datos.get(anime.getAdapterPosition()).getCategorias());
                 intent.putExtra("calificacion",Datos.get(anime.getAdapterPosition()).getClasificacion());
